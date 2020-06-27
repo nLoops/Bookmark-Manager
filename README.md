@@ -6,7 +6,7 @@ A web app that uses [AngularDart](https://angulardart.dev) and
 
 Using [Bootstrap components](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
 
-##How to use
+## How to use
 
 * Clone the project
 * into your terminal run ```webdev serve```
