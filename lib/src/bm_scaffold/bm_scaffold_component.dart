@@ -13,19 +13,20 @@ class BookmarkScaffoldComponent {
         title: 'Angular Dart',
         description: 'Come and learn Angular dart',
         url: 'https://angulardart.dev/guide/learning-angular',
-        edit: false),
+        edit: false,
+        isFresh: false),
     Bookmark(
-      title: 'Dart-lang Home',
-      description: 'Official website',
-      url: 'https://dartlang.org',
-      edit: false,
-    ),
+        title: 'Dart-lang Home',
+        description: 'Official website',
+        url: 'https://dartlang.org',
+        edit: false,
+        isFresh: false),
     Bookmark(
-      title: 'Build a unique user experience with Flutter',
-      description: 'Official website',
-      url: 'https://flutter.io',
-      edit: false,
-    )
+        title: 'Build a unique user experience with Flutter',
+        description: 'Official website',
+        url: 'https://flutter.io',
+        edit: false,
+        isFresh: false)
   ];
 
   Bookmark editedBookmark;
@@ -38,7 +39,7 @@ class BookmarkScaffoldComponent {
     bookmarks.add(Bookmark());
   }
 
-  void editBookmark(int index){
+  void editBookmark(int index) {
     bookmarks[index].edit = true;
   }
 }

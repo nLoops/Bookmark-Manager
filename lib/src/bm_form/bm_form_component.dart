@@ -32,8 +32,8 @@ class BookmarkFormComponent implements OnInit {
     if (form.valid) {
       bookmark
         ..update(editedBookmark)
-        ..edit =
-            false; // cascade methods, return full instance and access all vars
+        ..edit = false
+        ..isFresh = false; // cascade methods, return full instance and access all vars
     }
   }
 
