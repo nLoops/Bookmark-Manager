@@ -1,5 +1,4 @@
 import 'package:angular/angular.dart';
-import 'package:angular_forms/angular_forms.dart';
 import 'package:bookmark_manager/src/bm_form/bm_form_component.dart';
 
 import '../model/bookmark.dart';
@@ -7,22 +6,22 @@ import '../model/bookmark.dart';
 @Component(
     selector: 'bm-scaffold',
     templateUrl: 'bm_scaffold_component.html',
-    directives: [coreDirectives, formDirectives, BookmarkFormComponent])
+    directives: [coreDirectives, BookmarkFormComponent])
 class BookmarkScaffoldComponent {
   final List bookmarks = [
     Bookmark(
-        title: 'Creative Bracket',
-        description: 'Go-to Dart blog containing Dart',
-        url: 'https://creativebracket.com',
+        title: 'Angular Dart',
+        description: 'Come and learn Angular dart',
+        url: 'https://angulardart.dev/guide/learning-angular',
         edit: false),
     Bookmark(
-      title: 'Dartlang Home',
+      title: 'Dart-lang Home',
       description: 'Official website',
       url: 'https://dartlang.org',
       edit: false,
     ),
     Bookmark(
-      title: 'Creative Bracket',
+      title: 'Build a unique user experience with Flutter',
       description: 'Official website',
       url: 'https://flutter.io',
       edit: false,
