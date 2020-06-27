@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-ligh mb-3">
+    <a href="#" class="navbar-brand">Bookmark Manager</a>
+</nav>
+
+<div class="container">
+    
+    <div class="row">
+        <!--Using *ngIf from the coreDirectives to add logic-->
+        <div class="col-sm-12" *ngIf="bookmarks.isEmpty">
+            <div class="alert text-center">No bookmarks added.</div>
+        </div>
+        <!--Loop over the public list into dart file and display in list.-->
+        <div class="col-md-4 mb-3" *ngFor="let bookmark of bookmarks; let $i = index">
+            <div class="card">
+                <!--Assign data for each item in the list.-->
+                <div class="card-body" *ngIf="!bookmark.edit">
+                    <h5 class="card-title">{{bookmark.title}}</h5>
+                    <p class="card-text">{{bookmark.description}}</p>
+                    <a [href]="bookmark.url" class="btn btn-primary" target="_blank">Go to website</a>
+                    <button class="btn btn-warning" (click)="editBookmark($i)">Edit</button>
+                </div>
+                <!--Build Edit Form-->
+                <div class="card-body" *ngIf="bookmark.edit">
+                    <bm-form [bookmark]="bookmark" (onDelete)="removeBookmark($i)"></bm-form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <button (click)="addBookmark" class="btn btn-block btn-lg btn-outline-success">
+                + Add a bookmark
+            </button>
+        </div>
+    </div>
+</div>
